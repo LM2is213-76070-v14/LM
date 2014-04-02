@@ -13,7 +13,8 @@ public class Main {
 		//added onsdag
 		System.out.println("...och idag är det onsdag igen för oss alla.");
 		
-
+		//ADDED
+		System.out.println("Min andra ändring");
 	}
 
 }
