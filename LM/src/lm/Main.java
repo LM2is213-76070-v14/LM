@@ -18,6 +18,10 @@ public class Main {
 
 		//ADDED
 		System.out.println("Min andra ändring");
+	
+		//ADDED
+				System.out.println("Snart lunch kanske?");
+	
 	}
 
 }
