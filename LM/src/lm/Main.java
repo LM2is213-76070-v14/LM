@@ -6,6 +6,9 @@ public class Main {
 
 		//ADDED
 		System.out.println("Lantmäteriet");
+		
+		//ADDED from JKiiskinen
+		System.out.println("Nu har jag gjort en ändrig");
 
 	}
 
