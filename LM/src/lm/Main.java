@@ -9,6 +9,10 @@ public class Main {
 		
 		//ADDED from JKiiskinen
 		System.out.println("Nu har jag gjort en ändrig");
+		
+		//added onsdag
+		System.out.println("...och idag är det onsdag igen för oss alla.");
+		
 
 	}
 
