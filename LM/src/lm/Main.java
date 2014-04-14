@@ -19,8 +19,8 @@ public class Main {
 		//ADDED
 		System.out.println("Min andra ändring");
 	
-		//ADDED
-		System.out.println("Snart lunch kanske?");
+		//ADDED by Lisa
+		System.out.println("Det går bra nu");
 	
 	}
 
