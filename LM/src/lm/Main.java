@@ -24,7 +24,9 @@ public class Main {
 		
 		//ADDED new
 		System.out.println("This is a new printout.");
-	
+		
+		//Added a new output 14042014 Jonathan
+		System.out.println("This is a new printout.");
 	}
 
 }
