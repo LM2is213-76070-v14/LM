@@ -20,7 +20,7 @@ public class Main {
 		System.out.println("Min andra ändring");
 	
 		//ADDED
-				System.out.println("Snart lunch kanske?");
+		System.out.println("Snart lunch kanske?");
 	
 	}
 
