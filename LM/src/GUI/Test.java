@@ -1,18 +1,19 @@
 package GUI;
 
-import java.awt.TextArea;
+import java.awt.BorderLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
-
 
 public class Test extends JFrame {
 
-
 	private JPanel contentPane;
-	private TextArea txtpnViktigt;
+	private JPanel contentPane2;
+	private JTextArea txtpnViktigt;
+
 
 	/**
 	 * Create the frame.
@@ -25,7 +26,9 @@ public class Test extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		txtpnViktigt = new TextArea();
+		txtpnViktigt = new JTextArea();
+		txtpnViktigt.setWrapStyleWord(true);
+		txtpnViktigt.setLineWrap(true);
 		txtpnViktigt.setText("VIKTIGT!!! \n"
 				+ "På söndag kommer systemet vara nere för utvärdering och uppgradering. Vi hoppas allt ska vara körbart på Måndag morgon igen.\n"
 				+ "Det är exjobbarana som ska in och arbetat i systemet igen.\n"
@@ -48,6 +51,7 @@ public class Test extends JFrame {
 				+ "Det är exjobbarana som ska in och arbetat i systemet igen.\n"
 				+ "Det är exjobbarana som ska in och arbetat i systemet igen.");
 		txtpnViktigt.setBounds(28, 10, 377, 191);
+		
 		contentPane.add(txtpnViktigt);
 		
 	
