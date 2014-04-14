@@ -20,7 +20,7 @@ public class Main {
 		System.out.println("Min andra ändring");
 	
 		//ADDED by Lisa
-		System.out.println("Det går bra nu");
+		System.out.println("Det går bra nu!");
 	
 	}
 
