@@ -30,6 +30,9 @@ public class Main {
 		
 		//Added a new output Patrik
 		System.out.println("This is a another new printout.");
+		
+		//Added a new output Patrik again
+		System.out.println("This is a another new printout again.");
 	}
 
 }
