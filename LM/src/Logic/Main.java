@@ -14,5 +14,7 @@ public class Main {
 		
 		CreateMessage cm = new CreateMessage();
 		cm.setVisible(true);
+		
+		//
 	}
 }
