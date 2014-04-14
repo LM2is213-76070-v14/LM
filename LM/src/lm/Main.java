@@ -19,11 +19,9 @@ public class Main {
 		//ADDED
 		System.out.println("Min andra ändring");
 	
-<<<<<<< HEAD
 		//ADDED by Lisa
 		System.out.println("Det går bra nu!");
 	
-=======
 		//ADDED
 		System.out.println("Snart lunch kanske?");
 		
@@ -38,7 +36,7 @@ public class Main {
 		
 		//Added a new output Patrik again
 		System.out.println("This is a another new printout again.");
->>>>>>> branch 'master' of https://github.com/LM2is213-76070-v14/LM.git
+
 	}
 
 }
