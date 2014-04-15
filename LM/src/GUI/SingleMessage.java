@@ -1,6 +1,9 @@
 package GUI;
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -73,6 +76,13 @@ public class SingleMessage extends JFrame {
 		contentPane.add(btnPrevious);
 		
 		JButton btnClose = new JButton("Close");
+		
+		btnClose.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				dispose();
+			}
+		});
+		
 		btnClose.setBounds(170, 215, 89, 23);
 		contentPane.add(btnClose);
 		

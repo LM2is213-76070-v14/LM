@@ -46,10 +46,15 @@ public class MainScreen extends JFrame {
        
          //This creates a non-editable label, sets what the label will read
         //and adds the label to the first tab
-       JLabel label1 = new JLabel();
-       updateTab.add(label1);
+       JLabel updateLabel = new JLabel();
+       updateTab.add(updateLabel);
        ShowMessages showMessages = new ShowMessages(updateTab, menuBar);
        updateTab.add(showMessages.getPanel());
+       
+       JLabel createMessageLabel = new JLabel();
+       createMessageTab.add(createMessageLabel);
+       CreateMessage createMessages = new CreateMessage(createMessageTab);
+       createMessageTab.add(createMessages.getPanel());
 
        //This adds the first and second tab to our tabbed pane object and names it
        tabPanel.addTab("Updates", updateTab);

@@ -49,6 +49,7 @@ public class Login extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				MainScreen mainScreen = new MainScreen();
 				setVisible(false);
+				dispose();
 			}
 		});
 		btnLogin.setBounds(313, 215, 89, 23);

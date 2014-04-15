@@ -66,7 +66,6 @@ public class ShowMessages {
 						
 						SingleMessage tab = new SingleMessage( );
 					    tab.setVisible(true);
-						
 					}
 				}
 			}
