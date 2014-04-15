@@ -21,39 +21,23 @@ import Logic.Message;
 import Logic.MessageList;
 
 
-public class ShowMessages extends JFrame {
+public class ShowMessages {
 
 	private JPanel contentPane;
 	private MessageList mMessageList;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ShowMessages frame = new ShowMessages();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
-	public ShowMessages() {
+	public ShowMessages(JPanel mainPanel, JMenuBar menuBar) {
 		
 		mMessageList = new MessageList();
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 497, 354);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setBounds(100, 100, 497, 354);
 		
-		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
+		//JMenuBar menuBar = new JMenuBar();
+		//setJMenuBar(menuBar);
 		
 		JMenu mnFile = new JMenu("File");
 		menuBar.add(mnFile);
@@ -92,7 +76,8 @@ public class ShowMessages extends JFrame {
 		mnHelp.add(mntmAbout);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
+		//setContentPane(contentPane);
+		mainPanel.add(contentPane);
 		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.X_AXIS));
 		
 		JPanel panel = new JPanel();
@@ -131,6 +116,10 @@ public class ShowMessages extends JFrame {
 		}
 		
 		contentPane.add(pane);
+	}
+	
+	public JPanel getPanel() {
+		return contentPane;
 	}
 
 }
