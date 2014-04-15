@@ -1,12 +1,15 @@
 package GUI;
 
+import java.awt.Dimension;
+
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
-
 
 public class CreateMessage {
 
@@ -29,6 +32,7 @@ public class CreateMessage {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		mainPanel.add(contentPane);
 		contentPane.setLayout(null);
+		contentPane.setPreferredSize(new Dimension(450,300));
 
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Updates");
 		rdbtnNewRadioButton.setBounds(30, 97, 109, 23);

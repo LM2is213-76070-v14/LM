@@ -53,8 +53,10 @@ public class MainScreen extends JFrame {
        
        JLabel createMessageLabel = new JLabel();
        createMessageTab.add(createMessageLabel);
-       CreateMessage createMessages = new CreateMessage(createMessageTab);
-       createMessageTab.add(createMessages.getPanel());
+       CreateMessage createMessage = new CreateMessage(createMessageTab);
+       createMessageTab.add(createMessage.getPanel());
+       
+       createMessageTab.setVisible(true);
 
        //This adds the first and second tab to our tabbed pane object and names it
        tabPanel.addTab("Updates", updateTab);
