@@ -8,6 +8,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 
+import Slask.AdminVy;
+
 
 public class SingleMessage extends JFrame {
 	
@@ -79,6 +81,12 @@ public class SingleMessage extends JFrame {
 		contentPane.add(btnNext);
 	
 	}
+	
+    //example usage
+    public static void main (String []args){
+       SingleMessage tab = new SingleMessage();
+       tab.setVisible(true);
+   }
 	
 }
 
