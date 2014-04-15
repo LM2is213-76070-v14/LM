@@ -1,8 +1,8 @@
 package Logic;
 
-import GUI.CreateMessage;
 import GUI.Login;
 import GUI.MainScreen;
+import GUI.Tab;
 import GUI.Test;
 
 public class Main {
@@ -13,12 +13,11 @@ public class Main {
 		//Login login = new Login();
 		//login.setVisible(true);
 		
-		//CreateMessage cm = new CreateMessage();
-		//cm.setVisible(true);
+//		Test test = new Test();
+//		test.setVisible(true);
 		
-		//Test test = new Test();
-		//test.setVisible(true);
-		
-		//
+		Tab tab = new Tab();
+		tab.setVisible(true);
 	}
+	
 }
