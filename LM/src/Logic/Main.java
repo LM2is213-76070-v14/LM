@@ -2,8 +2,8 @@ package Logic;
 
 import GUI.Login;
 import GUI.MainScreen;
-import GUI.Tab;
 import GUI.Test;
+import Slask.Tab;
 
 public class Main {
 	
