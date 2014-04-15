@@ -60,7 +60,7 @@ public class MySubscriptions extends JFrame {
 		lblNewLabel.setBounds(71, 45, 204, 14);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("Change");
+		JButton btnNewButton = new JButton("Save");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
