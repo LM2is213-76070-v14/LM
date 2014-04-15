@@ -35,4 +35,8 @@ public class Message {
 	public String getDate() {
 		return mDate;
 	}
+	
+	public String toString() {
+		return mName + " | " + mText + " | " + mDate;
+	}
 }

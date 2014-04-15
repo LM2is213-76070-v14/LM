@@ -7,7 +7,7 @@ public class MessageList {
 	private ArrayList<Message> mMessageList;
 	
 	public MessageList() {
-		ArrayList<Message> mMessageList = new ArrayList<Message>();
+		mMessageList = new ArrayList<Message>();
 		fillList();
 	}
 	
