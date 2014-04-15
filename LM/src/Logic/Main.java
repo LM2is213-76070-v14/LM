@@ -16,8 +16,8 @@ public class Main {
 		//CreateMessage cm = new CreateMessage();
 		//cm.setVisible(true);
 		
-		Test test = new Test();
-		test.setVisible(true);
+		//Test test = new Test();
+		//test.setVisible(true);
 		
 		//
 	}

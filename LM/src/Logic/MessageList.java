@@ -24,4 +24,14 @@ public class MessageList {
 		mMessageList.add(m4);
 	}
 	
+	public Message getMessages(int counter) {
+		Message message = mMessageList.get(counter);
+		return message;
+	}
+	
+	public int getListLenght() {
+		int lenght = mMessageList.size();
+		return lenght;
+	}
+	
 }
