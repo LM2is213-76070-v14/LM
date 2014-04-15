@@ -2,7 +2,6 @@ package Logic;
 
 import GUI.Login;
 import GUI.MainScreen;
-import GUI.Test;
 import Slask.Tab;
 
 public class Main {
@@ -13,11 +12,11 @@ public class Main {
 		//Login login = new Login();
 		//login.setVisible(true);
 		
-		Test test = new Test();
-		test.setVisible(true);
-		
-		Tab tab = new Tab();
-		tab.setVisible(true);
+//		Test test = new Test();
+//		test.setVisible(true);
+//		
+//		Tab tab = new Tab();
+//		tab.setVisible(true);
 	}
 	
 }
