@@ -37,6 +37,6 @@ public class Message {
 	}
 	
 	public String toString() {
-		return mName + " | " + mText + " | " + mDate;
+		return mDate + " | " + mName + " | " + mText;
 	}
 }

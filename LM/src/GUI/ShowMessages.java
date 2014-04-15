@@ -1,17 +1,11 @@
 package GUI;
 
-import java.awt.EventQueue;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
 import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
-import javax.swing.JFrame;
 import javax.swing.JList;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
@@ -27,63 +21,27 @@ public class ShowMessages {
 	private MessageList mMessageList;
 
 	/**
-	 * Create the frame.
+	 * This is the constructor
 	 */
-	public ShowMessages(JPanel mainPanel, JMenuBar menuBar) {
-		
+	public ShowMessages(JPanel mainPanel) {
 		mMessageList = new MessageList();
-		
-		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//setBounds(100, 100, 497, 354);
-		
-		//JMenuBar menuBar = new JMenuBar();
-		//setJMenuBar(menuBar);
-		
-		JMenu mnFile = new JMenu("File");
-		menuBar.add(mnFile);
-		
-		JMenuItem mntmNew = new JMenuItem("New");
-		mnFile.add(mntmNew);
-		
-		JMenuItem mntmOpen = new JMenuItem("Open");
-		mnFile.add(mntmOpen);
-		
-		JMenuItem mntmSave = new JMenuItem("Save");
-		mnFile.add(mntmSave);
-		
-		JMenuItem mntmPrint = new JMenuItem("Print");
-		mnFile.add(mntmPrint);
-		
-		JMenuItem mntmExit = new JMenuItem("Exit");
-		mnFile.add(mntmExit);
-		
-		JMenu mnEdit = new JMenu("Edit");
-		menuBar.add(mnEdit);
-		
-		JMenuItem mntmDelete = new JMenuItem("Delete");
-		mnEdit.add(mntmDelete);
-		
-		JMenuItem mntmArchive = new JMenuItem("Archive");
-		mnEdit.add(mntmArchive);
-		
-		JMenu mnHelp = new JMenu("Help");
-		menuBar.add(mnHelp);
-		
-		JMenuItem mntmHelp = new JMenuItem("Help");
-		mnHelp.add(mntmHelp);
-		
-		JMenuItem mntmAbout = new JMenuItem("About");
-		mnHelp.add(mntmAbout);
+		createPanel(mainPanel);
+	}
+
+	/**
+	 * This Method creates the view of all messages
+	 */
+	public void createPanel(JPanel mainPanel) {
+
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		//setContentPane(contentPane);
 		mainPanel.add(contentPane);
 		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.X_AXIS));
-		
+
 		JPanel panel = new JPanel();
 		contentPane.add(panel);
 		panel.setLayout(null);
-		
+
 		JList list;
 		DefaultListModel model;
 
@@ -107,17 +65,20 @@ public class ShowMessages {
 			}
 		};
 		list.addMouseListener(mouseListener);
-		
+
 		int lenght = mMessageList.getListLenght();
-		
+
 		for(int i=0; i<lenght; i++) {
 			Message message = mMessageList.getMessages(i);
 			model.addElement(message.toString());
 		}
-		
+
 		contentPane.add(pane);
 	}
-	
+
+	/**
+	 * This method simply returns the whole class as a Panel
+	 */
 	public JPanel getPanel() {
 		return contentPane;
 	}

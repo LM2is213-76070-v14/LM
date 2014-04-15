@@ -10,6 +10,42 @@ public class MainScreen extends JFrame {
         
     	JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
+		
+		JMenu menuFile = new JMenu("File");
+		menuBar.add(menuFile);
+		
+		JMenuItem itemNew = new JMenuItem("New");
+		menuFile.add(itemNew);
+		
+		JMenuItem itemOpen = new JMenuItem("Open");
+		menuFile.add(itemOpen);
+		
+		JMenuItem itemSave = new JMenuItem("Save");
+		menuFile.add(itemSave);
+		
+		JMenuItem itemPrint = new JMenuItem("Print");
+		menuFile.add(itemPrint);
+		
+		JMenuItem itemExit = new JMenuItem("Exit");
+		menuFile.add(itemExit);
+		
+		JMenu menuEdit = new JMenu("Edit");
+		menuBar.add(menuEdit);
+		
+		JMenuItem itemDelete = new JMenuItem("Delete");
+		menuEdit.add(itemDelete);
+		
+		JMenuItem itemArchive = new JMenuItem("Archive");
+		menuEdit.add(itemArchive);
+		
+		JMenu menuHelp = new JMenu("Help");
+		menuBar.add(menuHelp);
+		
+		JMenuItem itemHelp = new JMenuItem("Help");
+		menuHelp.add(itemHelp);
+		
+		JMenuItem itemAbout = new JMenuItem("About");
+		menuHelp.add(itemAbout);
     	
          //This will create the title you see in the upper left of the window    
         setTitle("Tabbed Pane");  
@@ -42,14 +78,12 @@ public class MainScreen extends JFrame {
        
        JPanel jp8 = new JPanel();//This will create the eight tab
        
-       ShowMessages showMessages = new ShowMessages(jp1, menuBar);
-       jp1.add(showMessages.getPanel());
-       
          //This creates a non-editable label, sets what the label will read
         //and adds the label to the first tab
        JLabel label1 = new JLabel();
-       label1.setText("This is Tab 1");
        jp1.add(label1);
+       ShowMessages showMessages = new ShowMessages(jp1);
+       jp1.add(showMessages.getPanel());
 
        //This adds the first and second tab to our tabbed pane object and names it
        jtp.addTab("Updates", jp1);
