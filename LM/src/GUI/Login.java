@@ -1,6 +1,9 @@
 package GUI;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -42,6 +45,12 @@ public class Login extends JFrame {
 		contentPane.add(lblNewLabel_1);
 
 		JButton btnLogin = new JButton("Login");
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				MainScreen mainScreen = new MainScreen();
+				setVisible(false);
+			}
+		});
 		btnLogin.setBounds(313, 215, 89, 23);
 		contentPane.add(btnLogin);
 
@@ -55,6 +64,8 @@ public class Login extends JFrame {
 		forgotpasswordButton.setBounds(152, 146, 146, 23);
 		contentPane.add(forgotpasswordButton);
 		forgotpasswordButton.setContentAreaFilled(false);
-		forgotpasswordButton.setFocusPainted(true); 
+		forgotpasswordButton.setFocusPainted(true);
+		
+		setVisible(true); 
 	}
 }

@@ -63,8 +63,10 @@ public class ShowMessages {
 					if (index >= 0) {
 						Object o = MessageList.getModel().getElementAt(index);
 						System.out.println("Double-clicked on: " + o.toString());
-						// Här skriver man metoden för vilket case som skall
-						// hämtas
+						
+						SingleMessage tab = new SingleMessage( );
+					    tab.setVisible(true);
+						
 					}
 				}
 			}
