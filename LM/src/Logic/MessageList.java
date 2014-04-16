@@ -2,16 +2,16 @@ package Logic;
 
 import java.util.ArrayList;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Class MessageList.
+ * MessageList. A list that holds items of the class Message.
+ * 
  */
 public class MessageList {
 	
-	/** The m message list. */
 	private ArrayList<Message> mMessageList;
 	
 	//EDIT remove fillList-method
+	//DELETE --> //remove this line
 	/**
 	 * Instantiates a new message list.
 	 * And fills it with some messages. //remove this line
@@ -20,7 +20,6 @@ public class MessageList {
 		mMessageList = new ArrayList<Message>();
 		fillList();
 	}
-	
 	
 	//DELETE this method 
 	/**
@@ -38,6 +37,7 @@ public class MessageList {
 		mMessageList.add(m2);
 		mMessageList.add(m3);
 		mMessageList.add(m4);
+		
 	}
 	
 	/**
