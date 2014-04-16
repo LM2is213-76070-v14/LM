@@ -23,13 +23,23 @@ import javax.swing.border.EmptyBorder;
 import Logic.Logic;
 import Logic.Message;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ShowMessages.
+ */
 public class ShowMessages {
 
+	/** The content pane. */
 	private JPanel contentPane;
+	
+	/** The m logic. */
 	private Logic mLogic;
 
 	/**
-	 * This is the constructor
+	 * This is the constructor.
+	 *
+	 * @param mainPanel the main panel
+	 * @param menuBar the menu bar
 	 */
 	public ShowMessages(JPanel mainPanel, JMenuBar menuBar) {
 		mLogic = new Logic();
@@ -38,7 +48,9 @@ public class ShowMessages {
 	}
 
 	/**
-	 * This Method creates the view of all messages
+	 * This Method creates the view of all messages.
+	 *
+	 * @param mainPanel the main panel
 	 */
 	public void createPanel(JPanel mainPanel) {
 
@@ -104,6 +116,11 @@ public class ShowMessages {
 		contentPane.add(btnNewButton);
 	}
 	
+	/**
+	 * Creates the menu bar.
+	 *
+	 * @param menuBar the menu bar
+	 */
 	public void createMenuBar(JMenuBar menuBar) {
 		JMenu menuFile = new JMenu("File");
 		menuBar.add(menuFile);
@@ -143,7 +160,9 @@ public class ShowMessages {
 	}
 
 	/**
-	 * This method simply returns the whole class as a Panel
+	 * This method simply returns the whole class as a Panel.
+	 *
+	 * @return the panel
 	 */
 	public JPanel getPanel() {
 		return contentPane;

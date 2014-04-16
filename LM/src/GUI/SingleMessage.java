@@ -11,7 +11,7 @@ import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 
 /**
- * The class SingleMessage is the GUI class that shows a message.
+ * The class SingleMessage is a GUI class that shows a message.
  * 
  * @author Lisa Broman, Patrik Karlsson and Jonathan Kiiskinen
  * @version 2014-04-16
