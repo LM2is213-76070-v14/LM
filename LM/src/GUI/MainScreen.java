@@ -4,12 +4,26 @@ import javax.swing.*;
 
 import java.awt.event.*;
 
+/**
+ * The class MainScreen is the main GUI frame that is used in the application.
+ * 
+ * @author Lisa Broman, Patrik Karlsson and Jonathan Kiiskinen
+ * @version 2014-04-16
+ */
 public class MainScreen extends JFrame {
 
+	/**
+	 * Instantiates a new main screen.
+	 * 
+	 */
 	public MainScreen() {
 		createMainScreen();
 	}
 
+	/**
+	 * Creates the main screen.
+	 * 
+	 */
 	public void createMainScreen() {
 
 		JMenuBar menuBar = new JMenuBar();
