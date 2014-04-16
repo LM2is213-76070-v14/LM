@@ -1,8 +1,8 @@
 package Logic;
 
-public class Logic {
+public final class Logic {
 	
-	private final MessageList mMessageList;
+	private static MessageList mMessageList;
 	
 	public Logic() {
 		mMessageList = new MessageList();
