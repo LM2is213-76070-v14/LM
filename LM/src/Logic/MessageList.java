@@ -5,6 +5,8 @@ import java.util.ArrayList;
 /**
  * MessageList. A list that holds items of the class Message.
  * 
+ * @author Lisa Broman, Patrik Karlsson and Jonathan Kiiskinen
+ * @version 2014-04-16
  */
 public class MessageList {
 	
