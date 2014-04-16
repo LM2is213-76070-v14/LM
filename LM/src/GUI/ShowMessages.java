@@ -1,11 +1,13 @@
 package GUI;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -20,9 +22,6 @@ import javax.swing.border.EmptyBorder;
 
 import Logic.Logic;
 import Logic.Message;
-import Logic.MessageList;
-
-
 
 public class ShowMessages {
 
@@ -46,7 +45,7 @@ public class ShowMessages {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		mainPanel.add(contentPane);
-		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.X_AXIS));
+		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS));
 
 		JPanel panel = new JPanel();
 		contentPane.add(panel);
@@ -85,7 +84,9 @@ public class ShowMessages {
 			model.addElement(message.toString());
 		}
 		
-		JButton btnNewButton = new JButton("Save");
+		contentPane.add(pane);
+		
+		JButton btnNewButton = new JButton("Refresh");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -98,10 +99,9 @@ public class ShowMessages {
 				}
 			}
 		});
-		btnNewButton.setBounds(316, 370, 89, 23);
+		//btnNewButton.setBounds(316, 370, 89, 23);
+		contentPane.add(Box.createRigidArea(new Dimension(0, 10)));
 		contentPane.add(btnNewButton);
-
-		contentPane.add(pane);
 	}
 	
 	public void createMenuBar(JMenuBar menuBar) {
