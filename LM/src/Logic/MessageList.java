@@ -23,7 +23,8 @@ public class MessageList {
 		fillList();
 	}
 	
-	//DELETE this method 
+	//DELETE or EDIT// this method is used as a help method to add some messages to the list.
+	//Will it be used later?
 	/**
 	 * Fills the list with some messages.
 	 * 
