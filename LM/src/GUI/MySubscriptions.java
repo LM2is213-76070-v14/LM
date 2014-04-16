@@ -14,13 +14,21 @@ import javax.swing.JRadioButton;
 import javax.swing.border.EmptyBorder;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The class MySubscriptions is the GUI class that shows the subscription handling.
+ * 
+ * @author Lisa Broman, Patrik Karlsson and Jonathan Kiiskinen
+ * @version 2014-04-16
+ */
 public class MySubscriptions {
 
 	private JPanel contentPane;
-	
 
 	/**
-	 * Create the frame.
+	 * Creates the frame.
+	 *
+	 * @param mainPanel - the main panel
 	 */
 	public MySubscriptions(JPanel mainPanel) {
 		
@@ -59,7 +67,9 @@ public class MySubscriptions {
 	}
 	
 	/**
-	 * This method simply returns the whole class as a Panel
+	 * This method simply returns the whole class as a Panel.
+	 *
+	 * @return - the panel
 	 */
 	public JPanel getPanel() {
 		return contentPane;

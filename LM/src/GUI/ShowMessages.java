@@ -24,7 +24,7 @@ import Logic.Logic;
 import Logic.Message;
 
 /**
- * The Class ShowMessages.
+ * The class ShowMessages is the GUI class that shows all messages.
  * 
  * @author Lisa Broman, Patrik Karlsson and Jonathan Kiiskinen
  * @version 2014-04-16
