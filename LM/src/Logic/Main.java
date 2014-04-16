@@ -11,7 +11,7 @@ import Slask.Tab;
  * @version 2014-04-16
  */
 public class Main {
-	
+
 	/**
 	 * The main method for the application.
 	 * Starts the application.
@@ -22,5 +22,5 @@ public class Main {
 	{
 		Login login = new Login();
 	}
-	
+
 }

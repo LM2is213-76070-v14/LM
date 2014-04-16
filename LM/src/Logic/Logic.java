@@ -7,9 +7,9 @@ package Logic;
  * @version 2014-04-16
  */
 public final class Logic {
-	
+
 	private static MessageList mMessageList;
-	
+
 	/**
 	 * Instantiates a new logic with a list.
 	 * 
@@ -17,7 +17,7 @@ public final class Logic {
 	public Logic() {
 		mMessageList = new MessageList();
 	}
-	
+
 	/**
 	 * Gets a message.
 	 *
@@ -25,11 +25,11 @@ public final class Logic {
 	 * @return - the message
 	 */
 	public Message getMessage(int index) {
-		
+
 		Message message = mMessageList.getMessages(index);
 		return message; 
 	}
-	
+
 	/**
 	 * Gets the length of the message list.
 	 *
@@ -39,9 +39,9 @@ public final class Logic {
 		int lenght = mMessageList.getListLength();
 		return lenght;
 	}
-	
+
 	/**
-	 * Adds a message.
+	 * Adds a message to the list.
 	 *
 	 * @param message - the message
 	 */

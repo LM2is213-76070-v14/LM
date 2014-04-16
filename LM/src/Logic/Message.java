@@ -2,6 +2,9 @@ package Logic;
 
 /**
  * The Message class creates a message that can be edited.
+ * This is a only a testclass for the purpose of the system 
+ * because of the reason that we at this point not have implemented 
+ * the database yet.
  * 
  * @author Lisa Broman, Patrik Karlsson and Jonathan Kiiskinen
  * @version 2014-04-16
@@ -11,7 +14,7 @@ public class Message {
 	private String mName;
 	private String mText;
 	private String mDate;
-	
+
 	/**
 	 * Instantiates a new message with a name, a text and a date.
 	 *
@@ -24,7 +27,7 @@ public class Message {
 		mText = text;
 		mDate = date;
 	}
-	
+
 	/**
 	 * Sets the name.
 	 *
@@ -33,7 +36,7 @@ public class Message {
 	public void setName(String name) {
 		mName = name;
 	}
-	
+
 	/**
 	 * Gets the name.
 	 *
@@ -42,7 +45,7 @@ public class Message {
 	public String getName() {
 		return mName;
 	}
-	
+
 	/**
 	 * Sets the text.
 	 *
@@ -51,7 +54,7 @@ public class Message {
 	public void setText(String text) {
 		mText = text;
 	}
-	
+
 	/**
 	 * Gets the text.
 	 *
@@ -60,7 +63,7 @@ public class Message {
 	public String getText() {
 		return mText;
 	} 
-	
+
 	/**
 	 * Sets the date.
 	 *
@@ -69,7 +72,7 @@ public class Message {
 	public void setDate(String date) {
 		mDate = date;
 	}
-	
+
 	/**
 	 * Gets the date.
 	 *
@@ -78,9 +81,9 @@ public class Message {
 	public String getDate() {
 		return mDate;
 	}
-	
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
+
+	/**
+	 * @Override toString method
 	 */
 	public String toString() {
 		return mDate + " | " + mName + " | " + mText;

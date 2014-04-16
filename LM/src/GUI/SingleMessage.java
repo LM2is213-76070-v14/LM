@@ -17,24 +17,34 @@ import javax.swing.border.EmptyBorder;
  * @version 2014-04-16
  */
 public class SingleMessage extends JFrame {
-	
+
 	private JPanel contentPane;
 	private JTextArea messageText;
 	private JScrollPane scrollPane;
 
- /**
- * Creates the frame.
- *
- * @param text - the message text
- */
+	/**
+	 * This is the constructor for SingleMessage
+	 *
+	 * @param text - the message text
+	 */
 	public SingleMessage(String text) {
-		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		create(text);
+	}
+
+
+	/**
+	 * Creates the frame.
+	 *
+	 * @param text - the message text
+	 */
+	public void create(String text) {
+
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		messageText = new JTextArea();
 		messageText.setLineWrap(true);
 		messageText.setWrapStyleWord(true);
@@ -42,36 +52,26 @@ public class SingleMessage extends JFrame {
 		contentPane.add(scrollPane);  
 		scrollPane.setBounds(28, 10, 377, 191);  
 		scrollPane.setVisible(true);
-		
+
 		messageText.setText(text);
-		
-		JButton btnPrevious = new JButton("Previous");
-		btnPrevious.setBounds(60, 215, 89, 23);
-		contentPane.add(btnPrevious);
-		
-		JButton btnClose = new JButton("Close");
-		
-		btnClose.addActionListener(new ActionListener() {
+
+		JButton buttonPrevious = new JButton("Previous");
+		buttonPrevious.setBounds(60, 215, 89, 23);
+		contentPane.add(buttonPrevious);
+
+		JButton buttonClose = new JButton("Close");
+
+		buttonClose.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				dispose();
 			}
 		});
-		
-		btnClose.setBounds(170, 215, 89, 23);
-		contentPane.add(btnClose);
-		
-		JButton btnNext = new JButton("Next");
-		btnNext.setBounds(280, 215, 89, 23);
-		contentPane.add(btnNext);
-	
+		buttonClose.setBounds(170, 215, 89, 23);
+		contentPane.add(buttonClose);
+
+		JButton buttonNext = new JButton("Next");
+		buttonNext.setBounds(280, 215, 89, 23);
+		contentPane.add(buttonNext);
 	}
-	
-    //DELETE //this method is used as a help method to run the class.
-    public static void main (String []args){
-       SingleMessage tab = new SingleMessage(null);
-       tab.setVisible(true);
-       
-   }
-	
 }
 

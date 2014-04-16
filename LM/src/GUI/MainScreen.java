@@ -2,8 +2,6 @@ package GUI;
 
 import javax.swing.*;
 
-import java.awt.event.*;
-
 /**
  * The class MainScreen is the main GUI frame that is used in the application.
  * 
@@ -28,38 +26,22 @@ public class MainScreen extends JFrame {
 
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
-
-		//This will create the title you see in the upper left of the window    
 		setTitle("Tabbed Pane");  
-		setSize(600,400); //set size so the user can "see" it
-		//Here we are creating the object
+		setSize(600,400);
 
 		JTabbedPane tabPanel = new JTabbedPane();
-
-		//Moves tabs to the right side
 		tabPanel.setTabPlacement(MAXIMIZED_HORIZ);
-
-		//This creates the template on the windowed application that we will be using
 		getContentPane().add(tabPanel);
 
-		JPanel updateTab = new JPanel();//This will create the first tab
+		JPanel updateTab = new JPanel();
+		JPanel generalTab = new JPanel();
+		JPanel disruptionsTab = new JPanel();
+		JPanel createMessageTab = new JPanel();
+		JPanel editMessageTab = new JPanel();
+		JPanel editSubscriptionTab = new JPanel();
+		JPanel mySubscriptionTab = new JPanel();
+		JPanel myAccountTab = new JPanel();
 
-		JPanel generalTab = new JPanel();//This will create the second tab
-
-		JPanel disruptionsTab = new JPanel();//This will create the third tab
-
-		JPanel createMessageTab = new JPanel();//This will create the fourth tab
-
-		JPanel editMessageTab = new JPanel();//This will create the fifth tab
-
-		JPanel editSubscriptionTab = new JPanel();//This will create the sixth tab
-
-		JPanel mySubscriptionTab = new JPanel();//This will create the seventh tab
-
-		JPanel myAccountTab = new JPanel();//This will create the eight tab
-
-		//This creates a non-editable label, sets what the label will read
-		//and adds the label to the first tab
 		JLabel updateLabel = new JLabel();
 		updateTab.add(updateLabel);
 		ShowMessages showMessages = new ShowMessages(updateTab, menuBar);
@@ -69,7 +51,7 @@ public class MainScreen extends JFrame {
 		createMessageTab.add(createMessageLabel);
 		CreateMessage createMessage = new CreateMessage(createMessageTab);
 		createMessageTab.add(createMessage.getPanel());
-		
+
 		JLabel mySubscriptionLabel = new JLabel();
 		mySubscriptionTab.add(mySubscriptionLabel);
 		MySubscriptions mySubscriptions = new MySubscriptions(mySubscriptionTab);
@@ -77,7 +59,6 @@ public class MainScreen extends JFrame {
 
 		createMessageTab.setVisible(true);
 
-		//This adds the first and second tab to our tabbed pane object and names it
 		tabPanel.addTab("Updates", updateTab);
 		tabPanel.addTab("General info", generalTab);
 		tabPanel.addTab("Disruptions", disruptionsTab);
@@ -89,6 +70,6 @@ public class MainScreen extends JFrame {
 		tabPanel.addTab("My subscriptions", mySubscriptionTab);
 		tabPanel.addTab("My account", myAccountTab);
 
-		setVisible(true); //otherwise you won't "see" it 
+		setVisible(true);
 	}
 }

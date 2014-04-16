@@ -78,43 +78,42 @@ public class ShowMessages {
 					if (index >= 0) {
 						Object o = MessageList.getModel().getElementAt(index);
 						System.out.println("Double-clicked on: " + o.toString());
-						
+
 						SingleMessage tab = new SingleMessage(o.toString());
-					    tab.setVisible(true);
-					    
+						tab.setVisible(true);
+
 					}
 				}
 			}
 		};
 		list.addMouseListener(mouseListener);
 
-		int lenght = mLogic.getLength();
-		
-		for (int i = 0; i < lenght; i++) {
+		int length = mLogic.getLength();
+
+		for (int i = 0; i < length; i++) {
 			Message message = mLogic.getMessage(i);
 			model.addElement(message.toString());
 		}
-		
+
 		contentPane.add(pane);
-		
+
 		JButton btnNewButton = new JButton("Refresh");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
-				int lenght = mLogic.getLength();
+
+				int length = mLogic.getLength();
 				model.clear();
-				
-				for (int i = 0; i < lenght; i++) {
+
+				for (int i = 0; i < length; i++) {
 					Message message = mLogic.getMessage(i);
 					model.addElement(message.toString());
 				}
 			}
 		});
-		//btnNewButton.setBounds(316, 370, 89, 23);
 		contentPane.add(Box.createRigidArea(new Dimension(0, 10)));
 		contentPane.add(btnNewButton);
 	}
-	
+
 	/**
 	 * Creates the menu bar.
 	 *
@@ -123,37 +122,37 @@ public class ShowMessages {
 	public void createMenuBar(JMenuBar menuBar) {
 		JMenu menuFile = new JMenu("File");
 		menuBar.add(menuFile);
-		
+
 		JMenuItem itemNew = new JMenuItem("New");
 		menuFile.add(itemNew);
-		
+
 		JMenuItem itemOpen = new JMenuItem("Open");
 		menuFile.add(itemOpen);
-		
+
 		JMenuItem itemSave = new JMenuItem("Save");
 		menuFile.add(itemSave);
-		
+
 		JMenuItem itemPrint = new JMenuItem("Print");
 		menuFile.add(itemPrint);
-		
+
 		JMenuItem itemExit = new JMenuItem("Exit");
 		menuFile.add(itemExit);
-		
+
 		JMenu menuEdit = new JMenu("Edit");
 		menuBar.add(menuEdit);
-		
+
 		JMenuItem itemDelete = new JMenuItem("Delete");
 		menuEdit.add(itemDelete);
-		
+
 		JMenuItem itemArchive = new JMenuItem("Archive");
 		menuEdit.add(itemArchive);
-		
+
 		JMenu menuHelp = new JMenu("Help");
 		menuBar.add(menuHelp);
-		
+
 		JMenuItem itemHelp = new JMenuItem("Help");
 		menuHelp.add(itemHelp);
-		
+
 		JMenuItem itemAbout = new JMenuItem("About");
 		menuHelp.add(itemAbout);
 	}
