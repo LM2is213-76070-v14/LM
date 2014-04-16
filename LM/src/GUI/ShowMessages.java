@@ -64,7 +64,8 @@ public class ShowMessages {
 						Object o = MessageList.getModel().getElementAt(index);
 						System.out.println("Double-clicked on: " + o.toString());
 						
-						SingleMessage tab = new SingleMessage( );
+						
+						SingleMessage tab = new SingleMessage();
 					    tab.setVisible(true);
 					}
 				}

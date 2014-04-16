@@ -1,6 +1,7 @@
 package GUI;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,36 +14,23 @@ import javax.swing.JRadioButton;
 import javax.swing.border.EmptyBorder;
 
 
-public class MySubscriptions extends JFrame {
+public class MySubscriptions {
 
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MySubscriptions frame = new MySubscriptions();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
 	 */
-	public MySubscriptions() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+	public MySubscriptions(JPanel mainPanel) {
+		
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
+		mainPanel.add(contentPane);
 		contentPane.setLayout(null);
+		contentPane.setPreferredSize(new Dimension(450,300));
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Updates");
 		rdbtnNewRadioButton.setBounds(71, 85, 109, 23);
@@ -68,7 +56,12 @@ public class MySubscriptions extends JFrame {
 		btnNewButton.setBounds(316, 217, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		
-		
+	}
+	
+	/**
+	 * This method simply returns the whole class as a Panel
+	 */
+	public JPanel getPanel() {
+		return contentPane;
 	}
 }
