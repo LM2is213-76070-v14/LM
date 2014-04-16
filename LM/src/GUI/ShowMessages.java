@@ -53,7 +53,7 @@ public class ShowMessages {
 		panel.setLayout(null);
 
 		JList list;
-		DefaultListModel model;
+		final DefaultListModel model;
 
 		model = new DefaultListModel();
 		list = new JList(model);
@@ -88,9 +88,17 @@ public class ShowMessages {
 		JButton btnNewButton = new JButton("Save");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
+				int lenght = mLogic.getLenght();
+				model.clear();
+				
+				for (int i = 0; i < lenght; i++) {
+					Message message = mLogic.getMessage(i);
+					model.addElement(message.toString());
+				}
 			}
 		});
-		btnNewButton.setBounds(316, 217, 89, 23);
+		btnNewButton.setBounds(316, 370, 89, 23);
 		contentPane.add(btnNewButton);
 
 		contentPane.add(pane);

@@ -2,10 +2,10 @@ package Logic;
 
 public class Logic {
 	
-	private MessageList mMessageList;
+	private final MessageList mMessageList;
 	
 	public Logic() {
-		
+		mMessageList = new MessageList();
 	}
 	
 	public Message getMessage(int index) {
@@ -22,5 +22,4 @@ public class Logic {
 	public void addMessage(Message message) {
 		mMessageList.addMessage(message);
 	}
-	
 }
