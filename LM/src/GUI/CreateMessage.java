@@ -102,6 +102,10 @@ public class CreateMessage {
 				
 				Message newMessage = new Message(headLine, text, date);
 				mLogic.addMessage(newMessage);
+				
+				textArea.setText("");
+				dateField.setText("");
+				headLineField.setText("");
 			}
 		});
 		
