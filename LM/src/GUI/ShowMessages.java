@@ -23,23 +23,22 @@ import javax.swing.border.EmptyBorder;
 import Logic.Logic;
 import Logic.Message;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class ShowMessages.
+ * 
+ * @author Lisa Broman, Patrik Karlsson and Jonathan Kiiskinen
+ * @version 2014-04-16
  */
 public class ShowMessages {
 
-	/** The content pane. */
 	private JPanel contentPane;
-	
-	/** The m logic. */
 	private Logic mLogic;
 
 	/**
 	 * This is the constructor.
 	 *
-	 * @param mainPanel the main panel
-	 * @param menuBar the menu bar
+	 * @param mainPanel - the main panel
+	 * @param menuBar - the menu bar
 	 */
 	public ShowMessages(JPanel mainPanel, JMenuBar menuBar) {
 		mLogic = new Logic();
@@ -48,9 +47,9 @@ public class ShowMessages {
 	}
 
 	/**
-	 * This Method creates the view of all messages.
+	 * This method creates the view of all messages.
 	 *
-	 * @param mainPanel the main panel
+	 * @param mainPanel - the main panel
 	 */
 	public void createPanel(JPanel mainPanel) {
 
@@ -119,7 +118,7 @@ public class ShowMessages {
 	/**
 	 * Creates the menu bar.
 	 *
-	 * @param menuBar the menu bar
+	 * @param menuBar - the menu bar
 	 */
 	public void createMenuBar(JMenuBar menuBar) {
 		JMenu menuFile = new JMenu("File");
