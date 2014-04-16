@@ -14,8 +14,8 @@ public final class Logic {
 		return message; 
 	}
 	
-	public int getLenght() {
-		int lenght = mMessageList.getListLenght();
+	public int getLength() {
+		int lenght = mMessageList.getListLength();
 		return lenght;
 	}
 	

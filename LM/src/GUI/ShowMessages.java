@@ -77,7 +77,7 @@ public class ShowMessages {
 		};
 		list.addMouseListener(mouseListener);
 
-		int lenght = mLogic.getLenght();
+		int lenght = mLogic.getLength();
 		
 		for (int i = 0; i < lenght; i++) {
 			Message message = mLogic.getMessage(i);
@@ -90,7 +90,7 @@ public class ShowMessages {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				int lenght = mLogic.getLenght();
+				int lenght = mLogic.getLength();
 				model.clear();
 				
 				for (int i = 0; i < lenght; i++) {

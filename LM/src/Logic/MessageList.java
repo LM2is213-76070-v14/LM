@@ -2,15 +2,31 @@ package Logic;
 
 import java.util.ArrayList;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class MessageList.
+ */
 public class MessageList {
 	
+	/** The m message list. */
 	private ArrayList<Message> mMessageList;
 	
+	//EDIT remove fillList-method
+	/**
+	 * Instantiates a new message list.
+	 * And fills it with some messages. //remove this line
+	 */
 	public MessageList() {
 		mMessageList = new ArrayList<Message>();
 		fillList();
 	}
 	
+	
+	//DELETE this method 
+	/**
+	 * Fills the list with some messages.
+	 * 
+	 */
 	public void fillList() {
 		
 		Message m1 = new Message("Driftstopp", "Det har tyvärr skett en olycka...", "2014-04-14");
@@ -24,16 +40,32 @@ public class MessageList {
 		mMessageList.add(m4);
 	}
 	
+	/**
+	 * Gets the messages.
+	 *
+	 * @param counter the counter
+	 * @return the messages
+	 */
 	public Message getMessages(int counter) {
 		Message message = mMessageList.get(counter);
 		return message;
 	}
 	
-	public int getListLenght() {
-		int lenght = mMessageList.size();
-		return lenght;
+	/**
+	 * Gets the length of the list.
+	 *
+	 * @return - the list length 
+	 */
+	public int getListLength() {
+		int length = mMessageList.size();
+		return length;
 	}
 	
+	/**
+	 * Adds a message to the list.
+	 *
+	 * @param message - the message
+	 */
 	public void addMessage(Message message) {
 		mMessageList.add(message);
 	}
