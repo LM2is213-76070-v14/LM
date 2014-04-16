@@ -21,13 +21,21 @@ import Logic.Logic;
 import Logic.Message;
 import Logic.MessageList;
 
+/**
+ * The class CreateMessage is the GUI class there a message can be created.
+ * 
+ * @author Lisa Broman, Patrik Karlsson and Jonathan Kiiskinen
+ * @version 2014-04-16
+ */
 public class CreateMessage {
 
 	private JPanel contentPane;
 	private Logic mLogic;
 
 	/**
-	 * Constructor
+	 * Constructor.
+	 *
+	 * @param mainPanel - the main panel
 	 */
 	public CreateMessage(JPanel mainPanel) {
 		mLogic = new Logic();
@@ -35,7 +43,9 @@ public class CreateMessage {
 	}
 
 	/**
-	 * This Method creates the view of all messages
+	 * This Method creates the view of all messages.
+	 *
+	 * @param mainPanel - the main panel
 	 */
 	public void createPanel(JPanel mainPanel) {
 
@@ -113,7 +123,9 @@ public class CreateMessage {
 	}
 
 	/**
-	 * This method simply returns the whole class as a Panel
+	 * This method simply returns the whole class as a Panel.
+	 *
+	 * @return - the panel
 	 */
 	public JPanel getPanel() {
 		return contentPane;
