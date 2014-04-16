@@ -149,6 +149,7 @@ public class SingleMessage extends JFrame {
     public static void main (String []args){
        SingleMessage tab = new SingleMessage(null);
        tab.setVisible(true);
+       
    }
 	
 }
