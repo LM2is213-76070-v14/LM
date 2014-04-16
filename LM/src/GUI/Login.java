@@ -1,6 +1,5 @@
 package GUI;
 
-import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,12 +10,22 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+/**
+ * The class Login is the GUI class for the login.
+ * 
+ * @author Lisa Broman, Patrik Karlsson and Jonathan Kiiskinen
+ * @version 2014-04-16
+ */
 public class Login extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
 
+	/**
+	 * Instantiates a new login.
+	 * 
+	 */
 	public Login() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
