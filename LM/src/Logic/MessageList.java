@@ -34,4 +34,8 @@ public class MessageList {
 		return lenght;
 	}
 	
+	public void addMessage(Message message) {
+		mMessageList.add(message);
+	}
+	
 }

@@ -1,11 +1,14 @@
 package GUI;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
+import javax.swing.JButton;
 import javax.swing.JList;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -15,20 +18,22 @@ import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.EmptyBorder;
 
+import Logic.Logic;
 import Logic.Message;
 import Logic.MessageList;
+
 
 
 public class ShowMessages {
 
 	private JPanel contentPane;
-	private MessageList mMessageList;
+	private Logic mLogic;
 
 	/**
 	 * This is the constructor
 	 */
 	public ShowMessages(JPanel mainPanel, JMenuBar menuBar) {
-		mMessageList = new MessageList();
+		mLogic = new Logic();
 		createPanel(mainPanel);
 		createMenuBar(menuBar);
 	}
@@ -73,12 +78,20 @@ public class ShowMessages {
 		};
 		list.addMouseListener(mouseListener);
 
-		int lenght = mMessageList.getListLenght();
-
-		for(int i=0; i<lenght; i++) {
-			Message message = mMessageList.getMessages(i);
+		int lenght = mLogic.getLenght();
+		
+		for (int i = 0; i < lenght; i++) {
+			Message message = mLogic.getMessage(i);
 			model.addElement(message.toString());
 		}
+		
+		JButton btnNewButton = new JButton("Save");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnNewButton.setBounds(316, 217, 89, 23);
+		contentPane.add(btnNewButton);
 
 		contentPane.add(pane);
 	}
