@@ -10,6 +10,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 
+import Logic.Message;
+
 /**
  * The class SingleMessage is a GUI class that shows a message.
  * 
@@ -27,8 +29,8 @@ public class SingleMessage extends JFrame {
 	 *
 	 * @param text - the message text
 	 */
-	public SingleMessage(String text) {
-		create(text);
+	public SingleMessage(Message message) {
+		create(message);
 	}
 
 
@@ -37,7 +39,7 @@ public class SingleMessage extends JFrame {
 	 *
 	 * @param text - the message text
 	 */
-	public void create(String text) {
+	public void create(Message message) {
 
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -53,7 +55,7 @@ public class SingleMessage extends JFrame {
 		scrollPane.setBounds(28, 10, 377, 191);  
 		scrollPane.setVisible(true);
 
-		messageText.setText(text);
+		messageText.setText(message.getText());
 
 		JButton buttonPrevious = new JButton("Previous");
 		buttonPrevious.setBounds(60, 215, 89, 23);

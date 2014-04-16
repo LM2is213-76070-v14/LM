@@ -76,12 +76,9 @@ public class ShowMessages {
 				if (mouseEvent.getClickCount() == 2) {
 					int index = MessageList.locationToIndex(mouseEvent.getPoint());
 					if (index >= 0) {
-						Object o = MessageList.getModel().getElementAt(index);
-						System.out.println("Double-clicked on: " + o.toString());
-
-						SingleMessage tab = new SingleMessage(o.toString());
-						tab.setVisible(true);
-
+						Message message = mLogic.getMessage(index);
+						SingleMessage popUp = new SingleMessage(message);
+						popUp.setVisible(true);
 					}
 				}
 			}
