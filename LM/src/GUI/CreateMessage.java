@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 public class CreateMessage {
@@ -56,6 +57,29 @@ public class CreateMessage {
 		JButton btnNewButton = new JButton("Send");
 		btnNewButton.setBounds(316, 217, 89, 23);
 		contentPane.add(btnNewButton);
+		
+		JTextField textField = new JTextField();
+		textField.setBounds(222, 42, 86, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JTextField textField_1 = new JTextField();
+		textField_1.setBounds(338, 42, 86, 20);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("YYYY-MM-DD");
+		lblNewLabel_1.setBounds(222, 17, 75, 14);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("Headline");
+		lblNewLabel_2.setBounds(338, 17, 46, 14);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("Write message here");
+		lblNewLabel_3.setBounds(222, 73, 109, 14);
+		contentPane.add(lblNewLabel_3);
+		
 	}
 
 	/**
