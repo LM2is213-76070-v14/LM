@@ -1,7 +1,9 @@
 package GUI;
 
+import java.awt.Color;
 import java.awt.Dimension;
 
+import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -10,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
 public class CreateMessage {
@@ -50,34 +53,37 @@ public class CreateMessage {
 		lblNewLabel.setBounds(30, 57, 98, 14);
 		contentPane.add(lblNewLabel);
 
-		JTextArea textArea = new JTextArea("Här kan man skriva in medd.");
-		textArea.setBounds(203, 52, 197, 144);
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(203, 100, 200, 144);
+		Border border = BorderFactory.createLineBorder(Color.BLACK);
+		textArea.setBorder(BorderFactory.createCompoundBorder(border, 
+		BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 		contentPane.add(textArea);
 
 		JButton btnNewButton = new JButton("Send");
-		btnNewButton.setBounds(316, 217, 89, 23);
+		btnNewButton.setBounds(316, 260, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JTextField textField = new JTextField();
-		textField.setBounds(222, 42, 86, 20);
+		textField.setBounds(203, 42, 86, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		JTextField textField_1 = new JTextField();
-		textField_1.setBounds(338, 42, 86, 20);
+		textField_1.setBounds(319, 42, 86, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("YYYY-MM-DD");
-		lblNewLabel_1.setBounds(222, 17, 75, 14);
+		lblNewLabel_1.setBounds(203, 17, 75, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Headline");
-		lblNewLabel_2.setBounds(338, 17, 46, 14);
+		lblNewLabel_2.setBounds(319, 17, 65, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Write message here");
-		lblNewLabel_3.setBounds(222, 73, 109, 14);
+		lblNewLabel_3.setBounds(203, 73, 150, 14);
 		contentPane.add(lblNewLabel_3);
 		
 	}
