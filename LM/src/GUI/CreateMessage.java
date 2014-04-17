@@ -95,7 +95,7 @@ public class CreateMessage {
 		writeMessageLabel.setBounds(203, 73, 150, 14);
 		contentPane.add(writeMessageLabel);
 
-		JButton createSaveButton = new JButton("Create and Save");
+		JButton createSaveButton = new JButton("Create");
 		createSaveButton.setBounds(316, 260, 89, 23);
 
 		createSaveButton.addActionListener(new ActionListener() {

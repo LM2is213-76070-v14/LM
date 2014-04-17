@@ -49,11 +49,11 @@ public class Login extends JFrame {
 		passwordField.setColumns(10);
 
 		JLabel userNameLabel = new JLabel("User Name");
-		userNameLabel.setBounds(96, 53, 61, 14);
+		userNameLabel.setBounds(82, 53, 65, 14);
 		contentPane.add(userNameLabel);
 
 		JLabel passwordLabel = new JLabel("Password");
-		passwordLabel.setBounds(96, 84, 61, 14);
+		passwordLabel.setBounds(82, 84, 65, 14);
 		contentPane.add(passwordLabel);
 
 		JButton LoginButton = new JButton("Login");
